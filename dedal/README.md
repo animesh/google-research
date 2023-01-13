@@ -1,3 +1,21 @@
+# Setup
+```
+conda create -n align python=3.10
+conda activate align
+git clone https://github.com/animesh/google-research
+cd google-research
+pip install -r dedal/requirements.txt
+ln -s $PWD/dedal /home/ash022/mambaforge/envs/align/lib/python3.10/site-packages/.
+cd dedal
+python checkHomologyRPA2.py
+...
+  81  LLRLAARNVPVGFGESWKKHLSGEFG 106
+      ::.:.::::::::..:..:.: ::::
+ 246  RFQVLIGYNAELIAVFKTLPS-KNYD 270
+Smith-Waterman score (uncorrected): [3.358023]
+Homology detection logits: [-3.6916425]
+```
+
 # Dedal: Deep embedding and alignment of protein sequences.
 This package contains all the necessary tools to reproduce the experiments presented in the [dedal paper](https://www.biorxiv.org/content/10.1101/2021.11.15.468653v2).
 
